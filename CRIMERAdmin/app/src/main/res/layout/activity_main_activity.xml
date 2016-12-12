@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/appbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The CRIMER Project"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="28sp"
+                    android:textColor="@android:color/black"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/https_fir_databasecontrol_firebaseio_com"
+                    android:textSize="16sp"
+                    android:background="@drawable/border_rectangle"
+                    android:id="@+id/etUrl"
+                    android:imeOptions="actionGo"
+                    android:inputType="textUri" />
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_marginTop="80dp"
+                    android:text="@string/access"
+                    android:id="@+id/bt_access"
+                    android:onClick="Access"
+                    android:layout_gravity="center_horizontal" />
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/progress_bar"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
